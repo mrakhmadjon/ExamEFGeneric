@@ -9,7 +9,7 @@ namespace ExamEFGeneric.Service.Interfaces
 {
     public interface IPlaylistService
     {
-        IEnumerable<Playlist> GetCountOfAllPlaylist();
+        IEnumerable<Playlist> GetAllPlaylist();
 
     }
 }
