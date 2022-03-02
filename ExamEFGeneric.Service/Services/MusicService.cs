@@ -38,7 +38,7 @@ namespace ExamEFGeneric.Service.Services
 
              music.Include(p => p.Singer).Include(p => p.Playlist).ToList();
 
-            return  music.Skip(pageSize * (pageIndex - 1)).Take(pageIndex);
+            return  music.Skip(pageSize * (pageIndex - 1)).Take(pageSize);
         }
 
         public async Task<Music> GetAsync(Expression<Func<Music, bool>> predicate)
