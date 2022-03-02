@@ -13,45 +13,8 @@ namespace ExamEFGeneric
     {
         static async Task Main(string[] args)
         {
-            IMusicRepository musicRepository = new MusicRepository();
-
-            ISingerRepository singerRepository = new SingerRepository();
-
-            IPlaylistRepository playlistRepository = new PlaylistRepository();
-
-
-            Singer singer = new Singer()
-            {
-                FullName =  "Ali Jorayev"
-
-            };
-
-            Playlist playlist = new Playlist()
-            {
-                Name = "Hard Times"
-            };
-
-
-            //singerRepository.CreateAsync(singer);
-
-            //playlistRepository.CreateAsync(playlist);
-
-
-            Music music = new Music()
-            {
-                Title = "Today is Exam",
-                Description = "It is hard",
-                Length = "5-hours",
-                PlaylistId = 1, 
-                SingerId = 1
-            };
-
-            // musicRepository.CreateAsync(music);
-
-            Singer singer1 = new Singer();
-
-
-            IMusicService musicService = new MusicService();
+       
+           IMusicService musicService = new MusicService();
 
            var musics = await musicService.GetAllAsync(1,1);
 
